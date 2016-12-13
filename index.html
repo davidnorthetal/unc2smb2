@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>unc2smb2</title>
+        <style type="text/css" media="screen">
+            input {
+                font-size: medium;
+            }
+            #unc2smb {
+                border: 1px solid grey;
+                border-bottom: 0px;
+            }
+
+            #smb2unc {
+                border: 1px solid grey;
+            }
+        </style>
+        <script>
+            var $ = document.querySelectorAll.bind(document)
+            conv = function(self) {
+                other = self === $("#smb2unc")[0] ? $("#unc2smb")[0] : $("#smb2unc")[0];
+                self.value="self";
+                other.value="other";
+            }
+        </script>
+    </head>
+    <body>
+        <input id="unc2smb" type="text" oninput="conv(this)" autofocus=true placeholder="unc2smb"/>
+        <br/>
+        <input id="smb2unc" type="text" oninput="conv(this)" placeholder="smb2unc"/>
+    </body>
+</html>
